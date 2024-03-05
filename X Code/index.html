@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fintech</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Micro+5&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <!-- <nav class="navbar">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+  </nav> -->
+
+  <div class="container">
+    <h1>Sign Up with Google</h1>
+    <a href="#" class="google-btn">
+        <img src="Photos/GLogo.png" alt="Google Logo">
+        Sign Up with Google
+    </a>
+</div>
+    <a href="AboutUs.html" class="animated-button">About us</a>
+    <h1 class="title"> Fintech is loading...</h1>
+    <div id="countdown"></div>
+    <div class="img">
+        <img src="Photos/fintech.png" alt="Logo" width="150" height="100">
+    </div>
+
+    <script>
+      // Set the launch date and time (adjust as needed)
+      const launchDate = new Date("2024-05-01T00:00:00").getTime();
+
+      // Update the countdown every second
+      const countdownInterval = setInterval(function () {
+        const now = new Date().getTime();
+        const timeRemaining = launchDate - now;
+
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById(
+          "countdown"
+        ).innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        // Check if the countdown is complete
+        if (timeRemaining < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").innerHTML = "Website Launched!";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
